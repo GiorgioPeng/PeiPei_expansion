@@ -8,14 +8,15 @@ html,body{
   overflow: hidden;
 }
 #choose{
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 70%;
   width: 100%;
 }
 #teleplay,#live_streaming,#variety{
   margin-top: 5%;
   margin-left: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 15%;
   margin-right: 5%;
 }
 .container{
@@ -28,12 +29,22 @@ html,body{
 }
 
 .items{
-  background-image: url(../img/TV/teleplay/JS.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: auto;
   height: auto;
 }
+
+.itemsChecked{
+  background-color: #bfddf5;
+  background-image: url(../img/TV/checked.png) !important;
+  width: auto;
+  height: auto;
+  background-position: center;
+  background-size: 35% 90%;
+  background-repeat: no-repeat;
+}
+
 #other{
   position: fixed;
   bottom: 1%;
@@ -45,13 +56,10 @@ html,body{
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  text-align: center;
-  line-height: 40px;
-  border-radius: 20%;
   width: 30%;
   height: 40px;
-  background-color: pink;
-  color: white;
+  background-image: url(../img/TV/finish.png);
+  background-size: 100% 100%;
 }
 #page{
   margin-top: 5%;
@@ -85,15 +93,15 @@ input[type="range"]{
   width: 100%;
   height: 10px;
   -webkit-appearance: none;
-  background: -webkit-linear-gradient(#90b4f0, #90b4f0) no-repeat, #f2f2f2;
+  background: -webkit-linear-gradient(#bfddf5, #bfddf5) no-repeat, #f2f2f2;
   outline: none;
-  background-size: 50% 100%; /*这条语句第一个参数用来控制滑动条颜色的长度*/
+  background-size: 0% 100%; /*这条语句第一个参数用来控制滑动条颜色的长度*/
 }
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;/*清除系统默认样式*/
   height:16px;/*拖动块高度*/
   width: 16px;/*拖动块宽度*/
-  background:#90b4f0;/*拖动块背景*/
+  background:#bfddf5;/*拖动块背景*/
   border-radius: 50%; /*外观设置为圆形*/
-  border: solid 1px #90b4f0; /*设置边框*/
+  border: solid 1px #bfddf5; /*设置边框*/
 }
