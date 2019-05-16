@@ -12,10 +12,10 @@
     <div id="teleplay">
       <h4>电视剧</h4>
       <div class="container">
-        <div class="items" style="background-image:url(img/TV/teleplay/T.png)"></div>
-        <div class="items" style="background-image:url(img/TV/teleplay/JS.png)"></div>
-        <div class="items" style="background-image:url(img/TV/teleplay/JS.png)"></div>
-        <div class="items" style="background-image:url(img/TV/teleplay/S.png)"></div>
+        <div class="items" id="T" style="background-image:url(img/TV/teleplay/T.png)"></div>
+        <div class="items" id="JS" style="background-image:url(img/TV/teleplay/JS.png)"></div>
+        <div class="items" id="EA" style="background-image:url(img/TV/teleplay/EA.png)"></div>
+        <div class="items" id="S" style="background-image:url(img/TV/teleplay/S.png)"></div>
       </div>
     </div>
     <div id="live_streaming">
@@ -39,9 +39,9 @@
     </div>
   </div>
   <div id="other">
-    <div id="finish">完成</div>
+    <div id="finish"></div>
     <div id="page">
-      <div class="page_logo"></div>
+      <div class="page_logo" style="background-color:grey"></div>
       <div class="page_logo"></div>
     </div>
     <div id="range">
@@ -50,8 +50,11 @@
         <p>不喜欢</p>
         <p>喜欢</p>
       </div>
-      <input type="range">
+      <input type="range" min="0" max="5" step="1" value="0">
     </div>
   </div>
 </body>
+<script src="js/TVJs.js">
+
+</script>
 </html>
