@@ -2,14 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+  <meta name="author" content="Giorgio Peng">
+  <meta name="x5-fullscreen"content="true">
+  <meta name="x5-orientation"content="portrait">
+  <meta name="full-screen" content="yes">
+  <meta name="screen-orientation"content="portrait">
   <link rel="stylesheet" href="css/css.css">
+  <script src="js/zepto.js"></script>
   <title>PeiPei</title>
 </head>
 <body>
-  <div id="choose">
-    <div id="teleplay">
+  <div id="choose_game" class="choose">
+    <div id="computer_game" class="marginContainer">
+      <h4>电脑游戏</h4>
+      <div class="container">
+        <div class="items" style="background-image:url(img/game/PC/moba.png)"></div>
+        <div class="items" style="background-image:url(img/game/PC/rpg.png)"></div>
+        <div class="items" style="background-image:url(img/game/PC/shoot.png)"></div>
+        <div class="items" style="background-image:url(img/game/PC/card.png)"></div>
+        <div class="items" style="background-image:url(img/game/PC/sta.png)"></div>
+        <div class="items" style="background-image:url(img/game/PC/box.png)"></div>
+        <div class="items" style="background-image:url(img/game/PC/race.png)"></div>
+
+      </div>
+    </div>
+    <div id="mobile_game" class="marginContainer">
+      <h4>手机游戏</h4>
+      <div class="container">
+        <div class="items" style="background-image:url(img/game/mobile/nongyao.png)"></div>
+        <div class="items" style="background-image:url(img/game/mobile/hepingjingying.png)"></div>
+        <div class="items" style="background-image:url(img/game/mobile/diwurenge.png)"></div>
+        <div class="items" style="background-image:url(img/game/mobile/zhuojingling.png)"></div>
+        <div class="items" style="background-image:url(img/game/mobile/yingyangshi.png)"></div>
+        <div class="items" style="background-image:url(img/game/mobile/mingrifangzhou.png)"></div>
+        <div class="items" style="background-image:url(img/game/mobile/lushi.png)"></div>
+        <div class="items" style="background-image:url(img/game/mobile/benghuai3.png)"></div>
+        <div class="items" style="background-image:url(img/game/mobile/FGO.png)"></div>
+
+      </div>
+    </div>
+  </div>
+  <div id="choose_TV" class="choose" style="display:none">
+    <div id="teleplay" class="marginContainer">
       <h4>电视剧</h4>
       <div class="container">
         <div class="items" id="T" style="background-image:url(img/TV/teleplay/T.png)"></div>
@@ -18,7 +55,7 @@
         <div class="items" id="S" style="background-image:url(img/TV/teleplay/S.png)"></div>
       </div>
     </div>
-    <div id="live_streaming">
+    <div id="live_streaming" class="marginContainer">
       <h4>直播</h4>
       <div class="container">
         <div class="items" style="background-image:url(img/TV/live_streaming/game.png)"></div>
@@ -26,7 +63,7 @@
         <div class="items" style="background-image:url(img/TV/live_streaming/other.png)"></div>
       </div>
     </div>
-    <div id="variety">
+    <div id="variety" class="marginContainer">
       <h4>综艺</h4>
       <div class="container">
         <div class="items" style="background-image:url(img/TV/variety/sport.png)"></div>
@@ -38,23 +75,37 @@
       </div>
     </div>
   </div>
-  <div id="other">
-    <div id="finish"></div>
-    <div id="page">
+  <div class="other" id="other_game">
+    <div id="next"></div>
+    <div class="page">
+      <div class="page_logo" ></div>
       <div class="page_logo" style="background-color:grey"></div>
-      <div class="page_logo"></div>
     </div>
-    <div id="range">
+    <div class="range">
       <p>你的介意程度</p>
-      <div id="mind">
+      <div class="mind">
         <p>不喜欢</p>
         <p>喜欢</p>
       </div>
-      <input type="range" min="0" max="5" step="1" value="0">
+      <input type="range" id="game_range" min="0" max="5" step="1" value="3">
+    </div>
+  </div>
+  <div class="other" id="other_TV" style="display:none">
+    <div id="finish"></div>
+    <div class="page">
+      <div class="page_logo" style="background-color:grey"></div>
+      <div class="page_logo"></div>
+    </div>
+    <div class="range">
+      <p>你的介意程度</p>
+      <div class="mind">
+        <p>不喜欢</p>
+        <p>喜欢</p>
+      </div>
+      <input type="range" id="TV_range" min="0" max="5" step="1" value="3">
     </div>
   </div>
 </body>
-<script src="js/TVJs.js">
-
-</script>
+<script src="js/gameJs.js"></script>
+<script src="js/TVJs.js"></script>
 </html>
